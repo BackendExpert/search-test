@@ -108,7 +108,11 @@
         $decode_data = json_decode($tags);
 
         $userInput = "JehanKandy";
-        
+        if (in_array($userInput, $decode_data)) {
+            echo $userInput . " exists in the array!";
+        } else {
+            echo $userInput . " does not exist in the array.";
+        }
 
         }
     }
