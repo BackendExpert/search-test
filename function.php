@@ -75,40 +75,37 @@
             echo "<p style='color:red'>No Recodes Found</p>";
         }
 
-
-
-
         while($row = mysqli_fetch_assoc($select_tag_result)){
+        //     $view_data = "
+        //     <div class='card'>
+        //     <div class='card-header'>"
+        //       .$row['iname'].
+        //     "</div>
+        //     <div class='card-body'>
+        //       <h5 class='card-title'>".$row['email']."</h5>
+        //       <p class='card-text'>".$row['moblie']."</p>
+        //       <p>Tag</p>";
 
-            $tags=$data['tag'];
-            $decode_data = json_decode($tags, true);
+        //       $tags=$row['tag'];
+        //       $decode_data = json_decode($tags);
+              
+        //       if(in_array($search_data, $decode_data)){
 
-            if(in_array())
+        //             foreach ($decode_data as $tg){
+        //                 $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
+        //             }    
 
-            $view_data = "
-            <div class='card'>
-            <div class='card-header'>"
-              .$row['iname'].
-            "</div>
-            <div class='card-body'>
-              <h5 class='card-title'>".$row['email']."</h5>
-              <p class='card-text'>".$row['moblie']."</p>
-              <p>Tag</p>";
+        //         }
+              
+        //       $view_data .= "</div>
+        //   </div><br>
 
+        //    ";
 
-              if ($decode_data !== null && is_array($decode_data)) {
-                foreach ($decode_data as $tg){
-                    $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
-                }    
-              } else {
-                echo "Error decoding JSON data ". json_last_error_msg();
-            }
-              $view_data .= "</div>
-          </div><br>
+        //    echo $view_data;
 
-           ";
-
-           echo $view_data;
+        $tags=$row['tag'];
+        $decode_data = json_decode($tags);
 
         }
     }
