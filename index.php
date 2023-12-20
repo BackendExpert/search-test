@@ -21,14 +21,14 @@
             
             ?>
             <form action="<?php echo($_SERVER['PHP_SELF'])?>" method="post">
-                <label for="name">Name : </label>
+                <!-- <label for="name">Name : </label>
                 <input type="text" name="i_name" id="" class="form-control" required><br>
 
                 <label for="email">Email : </label>
                 <input type="email" name="email" id="" class="form-control" required><br>
 
                 <label for="mobile">Mobile : </label>
-                <input type="text" name="mobile" id="" class="form-control" required><br>
+                <input type="text" name="mobile" id="" class="form-control" required><br> -->
 
                 <label for="tag">Tag : </label>
                 <textarea name="i_tag" id="" cols="30" rows="5" class="form-control" style="resize:none;"></textarea><br>
