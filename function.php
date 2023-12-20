@@ -33,7 +33,11 @@
            ";
 
            echo $view_data;
-        }
+        }        
+    }
+
+    function search_data($data){
+        $con = Connection();
 
         
     }
