@@ -12,7 +12,7 @@
 
     <?php 
         if(isset($_POST['tag_search'])){
-            $result = search_data();
+            $result = search_data($_POST['search_tag']);
             echo $result;
         }
     ?>
