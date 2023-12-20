@@ -32,13 +32,12 @@
               <p>Tag</p>";
 
               $decode_data = json_decode($row['tag']);
-              if($decode_data === null && json_last_error() !== JSON_ERROR_NONE){
-                return false;
-              }else{
-                $view_data .= "  <button class='btn btn-primary'>".$decode_data->tag."</button>";
+              foreach ($decode_data as $tag){
+                
               }
 
-             
+              $view_data .= "  <button class='btn btn-primary'>".$decode_data->tag."</button>";
+            
               $view_data .= "</div>
           </div><br>
 
