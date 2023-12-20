@@ -17,22 +17,24 @@
         $select_all_data_result = mysqli_query($con, $select_all_data);
 
         while($row = mysqli_fetch_assoc($select_all_data_result)){
-            $view_data = `
-            <div class=card">
-            <div class="card-header">`
+            $view_data = "
+            <div class='card'>
+            <div class='card-header'>"
               .$row['iname'].
-            `</div>
-            <div class="card-body">
-              <h5 class="card-title">`.$row['email'].`</h5>
-              <p class="card-text">`.$row['mobile'].`</p>
+            "</div>
+            <div class='card-body'>
+              <h5 class='card-title'>".$row['email']."</h5>
+              <p class='card-text'>".$row['moblie']."</p>
               <p>Tag</p>
-              <button class="btn btn-primary">`.$row['tag'].`</button>
+              <button class='btn btn-primary'>".$row['tag']."</button>
             </div>
           </div>
-           `;
+           ";
+
+           echo $view_data;
         }
 
-        echo $view_data;
+        
     }
 
 ?>
