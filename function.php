@@ -48,7 +48,9 @@
 
     function data_by_search(){
         $con = Connection();
-        
+
+        $search_data = strval($_SESSION['search_data']);
+        echo $search_data;
     }
 
 ?>
