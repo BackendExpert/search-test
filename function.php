@@ -53,8 +53,13 @@
         
         $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
         $select_tag_result = mysqli_query($con, $select_tag);
+        $tag_nor = mysqli_num_rows($select_tag_result);
 
-        while($row = mysqli_fetch_assoc($select_all_data_result)){
+        if($tag_nor == 0){
+            echo "<p style='color:red'></p>"
+        }
+
+        while($row = mysqli_fetch_assoc($select_tag_result)){
             $view_data = "
             <div class='card'>
             <div class='card-header'>"
