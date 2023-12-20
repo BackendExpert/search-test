@@ -13,7 +13,9 @@
 <div class="container">
     <br><br>
     <h2>Searching Test</h2>
-
+    <hr>
+    <a href=""><button class="btn btn-success">Search Data</button></a>
+    <br>
     <div class="card">
         <div class="card-header">Data</div>
         <div class="card-body">            
@@ -21,13 +23,13 @@
                 <label for="name">Name : </label>
                 <input type="text" name="i_name" id="" class="form-control" required><br>
 
-                <label for="name">Email : </label>
-                <input type="text" name="email" id="" class="form-control" required><br>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="" class="form-control" required><br>
 
-                <label for="name">Mobile : </label>
+                <label for="mobile">Mobile : </label>
                 <input type="text" name="mobile" id="" class="form-control" required><br>
 
-                <label for="name">Tag : </label>
+                <label for="tag">Tag : </label>
                 <input type="text" name="i_tag" id="" class="form-control" required><br>
 
                 <div class="row">
