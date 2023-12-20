@@ -6,7 +6,15 @@
         $con = Connection();
 
         $dataArray = explode("\n", $tag);
-        
+
+        $dataArray = array_map('trim', $dataArray);
+
+        $jsonEncodedData = json_encode($dataArray);
+    
+
+        echo '<pre>';
+        echo $jsonEncodedData;
+        echo '</pre>';
         
 
         // $insert_data = "INSERT INTO data_tbl(iname,email,moblie,tag,add_at)VALUES('$iname','$email','$mobile','$jsonData', NOW())";
