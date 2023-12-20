@@ -16,9 +16,20 @@
         $select_all_data = "SELECT * FROM data_tbl";
         $select_all_data_result = mysqli_query($con, $select_all_data);
 
-        // while($row = mysqli_fetch_assoc($select_all_data_result)){
-
-        // }
+        while($row = mysqli_fetch_assoc($select_all_data_result)){
+            $view_data = `
+            <div class=card">
+            <div class="card-header">`
+              .$row['iname'].
+            `</div>
+            <div class="card-body">
+              <h5 class="card-title">`.$row['email'].`</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+           `;
+        }
     }
 
 ?>
