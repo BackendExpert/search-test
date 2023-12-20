@@ -29,6 +29,15 @@
 
                 <label for="name">Tag : </label>
                 <input type="text" name="i_tag" id="" class="form-control"><br>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="reset" value="Clear" class="btn btn-secondary">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="submit" value="Add Data" class="btn btn-success">
+                    </div>
+                </div>
             </form>
         </div>
     </div>
