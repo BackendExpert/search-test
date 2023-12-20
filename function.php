@@ -24,12 +24,15 @@
             `</div>
             <div class="card-body">
               <h5 class="card-title">`.$row['email'].`</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p class="card-text">`.$row['mobile'].`</p>
+              <p>Tag</p>
+              <button class="btn btn-primary">`.$row['tag'].`</button>
             </div>
           </div>
            `;
         }
+
+        echo $view_data;
     }
 
 ?>
