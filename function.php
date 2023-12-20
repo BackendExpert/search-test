@@ -53,6 +53,25 @@
         
         $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
         $select_tag_result = mysqli_query($con, $select_tag);
+
+        while($row = mysqli_fetch_assoc($select_all_data_result)){
+            $view_data = "
+            <div class='card'>
+            <div class='card-header'>"
+              .$row['iname'].
+            "</div>
+            <div class='card-body'>
+              <h5 class='card-title'>".$row['email']."</h5>
+              <p class='card-text'>".$row['moblie']."</p>
+              <p>Tag</p>
+              <button class='btn btn-primary'>".$row['tag']."</button>
+            </div>
+          </div><br>
+
+           ";
+
+           echo $view_data;
+        }
     }
 
 ?>
