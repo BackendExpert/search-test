@@ -57,9 +57,9 @@
         $con = Connection();
         
         // echo $data;
-        $jsonData = json_encode($data);
+        // $jsonData = json_encode($data);
 
-        $_SESSION['search_data'] = $jsonData;
+        $_SESSION['search_data'] = $data;
 
     }
 
@@ -68,22 +68,14 @@
 
         $search_data = strval($_SESSION['search_data']);
 
-        echo $search_data ."<br>";
-        
-        $select_tag = "SELECT * FROM data_tbl";
+
+        $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
         $select_tag_result = mysqli_query($con, $select_tag);
         $tag_nor = mysqli_num_rows($select_tag_result);
-        $row = mysqli_fetch_assoc($select_tag_result);
 
-        echo $row['tag'];
-
-        // $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
-        // $select_tag_result = mysqli_query($con, $select_tag);
-        // $tag_nor = mysqli_num_rows($select_tag_result);
-
-        // if($tag_nor == 0){
-        //     echo "<p style='color:red'>No Recodes Found</p>";
-        // }
+        if($tag_nor == 0){
+            echo "<p style='color:red'>No Recodes Found</p>";
+        }
 
         // while($row = mysqli_fetch_assoc($select_tag_result)){
             
