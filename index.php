@@ -19,16 +19,16 @@
         <div class="card-body">            
             <form action="<?php echo($_SERVER['PHP_SELF'])?>" method="post">
                 <label for="name">Name : </label>
-                <input type="text" name="i_name" id="" class="form-control"><br>
+                <input type="text" name="i_name" id="" class="form-control" required><br>
 
                 <label for="name">Email : </label>
-                <input type="text" name="email" id="" class="form-control"><br>
+                <input type="text" name="email" id="" class="form-control" required><br>
 
                 <label for="name">Mobile : </label>
-                <input type="text" name="mobile" id="" class="form-control"><br>
+                <input type="text" name="mobile" id="" class="form-control" required><br>
 
                 <label for="name">Tag : </label>
-                <input type="text" name="i_tag" id="" class="form-control"><br>
+                <input type="text" name="i_tag" id="" class="form-control" required><br>
 
                 <div class="row">
                     <div class="col-lg-6">
