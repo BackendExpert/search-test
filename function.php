@@ -31,11 +31,16 @@
               <p class='card-text'>".$row['moblie']."</p>
               <p>Tag</p>";
 
-              $decode_data = json_decode($row['tag']);
-              foreach ($decode_data as $tg){
-                $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
-              }             
-            
+              $tags=$row['tag'];
+              $decode_data = json_decode($tags, true);
+
+              if ($decode_data !== null && is_array($decode_data)) {
+                foreach ($decode_data as $tg){
+                    $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
+                }    
+              } else {
+                echo "Error decoding JSON data ". json_last_error_msg();
+            }
               $view_data .= "</div>
           </div><br>
 
