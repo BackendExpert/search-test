@@ -75,7 +75,14 @@
             echo "<p style='color:red'>No Recodes Found</p>";
         }
 
+
+
+
         while($row = mysqli_fetch_assoc($select_tag_result)){
+
+            $tags=$data['tag'];
+            $decode_data = json_decode($tags, true);
+
             $view_data = "
             <div class='card'>
             <div class='card-header'>"
@@ -86,8 +93,6 @@
               <p class='card-text'>".$row['moblie']."</p>
               <p>Tag</p>";
 
-              $tags=$row['tag'];
-              $decode_data = json_decode($tags, true);
 
               if ($decode_data !== null && is_array($decode_data)) {
                 foreach ($decode_data as $tg){
