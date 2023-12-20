@@ -28,7 +28,8 @@
               <p>Tag</p>
               <button class='btn btn-primary'>".$row['tag']."</button>
             </div>
-          </div>
+          </div><br>
+
            ";
 
            echo $view_data;
