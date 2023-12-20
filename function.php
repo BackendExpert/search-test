@@ -107,6 +107,9 @@
         $tags=$row['tag'];
         $decode_data = json_decode($tags);
 
+        $userInput = "JehanKandy";
+        
+
         }
     }
 
