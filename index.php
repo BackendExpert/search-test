@@ -15,10 +15,19 @@
     <h2>Searching Test</h2>
     <hr>
     <a href=""><button class="btn btn-success">Search Data</button></a>
-    <br>
+    <br><br>
     <div class="card">
         <div class="card-header">Data</div>
-        <div class="card-body">            
+        <div class="card-body">     
+            <?php 
+                include("function.php");
+
+                if(isset($_POST['add_data'])){
+                    $result = data_add($_POST['i_name'],$_POST['email'],$_POST['mobile'],$_POST['i_tag']);
+                    echo $result;
+                }
+            
+            ?>
             <form action="<?php echo($_SERVER['PHP_SELF'])?>" method="post">
                 <label for="name">Name : </label>
                 <input type="text" name="i_name" id="" class="form-control" required><br>
@@ -37,7 +46,7 @@
                         <input type="reset" value="Clear" class="btn btn-secondary" style="width:100%;">
                     </div>
                     <div class="col-lg-6">
-                        <input type="submit" value="Add Data" class="btn btn-success" style="width:100%;">
+                        <input type="submit" value="Add Data" class="btn btn-success" name="add_data" style="width:100%;">
                     </div>
                 </div>
             </form>
