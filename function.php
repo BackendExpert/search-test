@@ -83,6 +83,8 @@
             $tags=$data['tag'];
             $decode_data = json_decode($tags, true);
 
+            if(in_array())
+
             $view_data = "
             <div class='card'>
             <div class='card-header'>"
