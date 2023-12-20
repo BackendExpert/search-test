@@ -31,7 +31,7 @@
                 <input type="text" name="mobile" id="" class="form-control" required><br>
 
                 <label for="tag">Tag : </label>
-                <input type="text" name="i_tag" id="" class="form-control" required><br>
+                <textarea name="i_tag" id="" cols="30" rows="5" class="form-control" style="resize:none;"></textarea><br>
 
                 <div class="row">
                     <div class="col-lg-6">
