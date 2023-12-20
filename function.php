@@ -29,8 +29,11 @@
             <div class='card-body'>
               <h5 class='card-title'>".$row['email']."</h5>
               <p class='card-text'>".$row['moblie']."</p>
-              <p>Tag</p>
-              <button class='btn btn-primary'>".$row['tag']."</button>
+              <p>Tag</p>";
+
+              $decode_data = json_decode();
+
+             $view_data .= "  <button class='btn btn-primary'>".$row['tag']."</button>
             </div>
           </div><br>
 
