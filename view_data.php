@@ -10,6 +10,13 @@
     <a href="index.php"><button class="btn btn-primary">Add Data</button></a>
     <br><br>
 
+    <?php 
+        if(isset($_POST['tag_search']){
+            $result = search_data();
+            echo $result;
+        })
+    ?>
+
     <form action="" method="post">
         <div class="row">
             <div class="col-lg-8">
