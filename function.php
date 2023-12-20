@@ -38,8 +38,9 @@
 
     function search_data($data){
         $con = Connection();
-
         
+        echo $data;
+
     }
 
 ?>
