@@ -42,8 +42,13 @@
         
         // echo $data;
 
-        
+        $_SESSION['search_data'] = $data;
 
+    }
+
+    function data_by_search(){
+        $con = Connection();
+        
     }
 
 ?>
