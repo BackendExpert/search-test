@@ -3,7 +3,7 @@
         $server = "localhost";
         $user = "root";
         $pass = "";
-        $db_name = "search_test";
+        $db_name = "search_test_db";
 
         $con = mysqli_connect($server,$user,$pass,$db_name);
 
