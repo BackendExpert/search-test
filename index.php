@@ -6,7 +6,7 @@
     <br><br>
     <h2>Searching Test</h2>
     <hr>
-    <a href=""><button class="btn btn-success">Search Data</button></a>
+    <a href="view_data.php"><button class="btn btn-success">Search Data</button></a>
     <br><br>
     <div class="card">
         <div class="card-header">Data</div>
