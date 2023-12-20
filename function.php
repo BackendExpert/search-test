@@ -57,8 +57,9 @@
         $con = Connection();
         
         // echo $data;
+        $jsonData = json_encode($data);
 
-        $_SESSION['search_data'] = $data;
+        $_SESSION['search_data'] = $jsonData;
 
     }
 
@@ -66,55 +67,30 @@
         $con = Connection();
 
         $search_data = strval($_SESSION['search_data']);
+
+        echo $search_data ."<br>";
         
-        $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
+        $select_tag = "SELECT * FROM data_tbl";
         $select_tag_result = mysqli_query($con, $select_tag);
         $tag_nor = mysqli_num_rows($select_tag_result);
+        $row = mysqli_fetch_assoc($select_tag_result);
 
-        if($tag_nor == 0){
-            echo "<p style='color:red'>No Recodes Found</p>";
-        }
+        echo $row['tag'];
 
-        while($row = mysqli_fetch_assoc($select_tag_result)){
-        //     $view_data = "
-        //     <div class='card'>
-        //     <div class='card-header'>"
-        //       .$row['iname'].
-        //     "</div>
-        //     <div class='card-body'>
-        //       <h5 class='card-title'>".$row['email']."</h5>
-        //       <p class='card-text'>".$row['moblie']."</p>
-        //       <p>Tag</p>";
+        // $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
+        // $select_tag_result = mysqli_query($con, $select_tag);
+        // $tag_nor = mysqli_num_rows($select_tag_result);
 
-        //       $tags=$row['tag'];
-        //       $decode_data = json_decode($tags);
-              
-        //       if(in_array($search_data, $decode_data)){
+        // if($tag_nor == 0){
+        //     echo "<p style='color:red'>No Recodes Found</p>";
+        // }
 
-        //             foreach ($decode_data as $tg){
-        //                 $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
-        //             }    
+        // while($row = mysqli_fetch_assoc($select_tag_result)){
+            
+        // }
 
-        //         }
-              
-        //       $view_data .= "</div>
-        //   </div><br>
 
-        //    ";
 
-        //    echo $view_data;
-
-        $tags=$row['tag'];
-        $decode_data = json_decode($tags);
-
-        $userInput = "JehanKandy";
-        if (in_array($userInput, $decode_data)) {
-            echo $userInput . " exists in the array!";
-        } else {
-            echo $userInput . " does not exist in the array.";
-        }
-
-        }
     }
 
 ?>
