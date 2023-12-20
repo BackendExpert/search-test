@@ -31,10 +31,15 @@
               <p class='card-text'>".$row['moblie']."</p>
               <p>Tag</p>";
 
-              $decode_data = json_decode();
+              $decode_data = json_decode($row['tag']);
+              if($decode_data === null && json_last_error() !== JSON_ERROR_NONE){
+                return false;
+              }else{
+                $view_data .= "  <button class='btn btn-primary'>".$decode_data->tag."</button>";
+              }
 
-             $view_data .= "  <button class='btn btn-primary'>".$row['tag']."</button>
-            </div>
+             
+              $view_data .= "</div>
           </div><br>
 
            ";
