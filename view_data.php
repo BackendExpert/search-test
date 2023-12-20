@@ -11,10 +11,10 @@
     <br><br>
 
     <?php 
-        if(isset($_POST['tag_search']){
+        if(isset($_POST['tag_search'])){
             $result = search_data();
             echo $result;
-        })
+        }
     ?>
 
     <form action="" method="post">
