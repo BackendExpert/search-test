@@ -10,4 +10,15 @@
         $insert_data_result = mysqli_query($con, $insert_data);
     }
 
+    function all_data(){
+        $con = Connection();
+
+        $select_all_data = "SELECT * FROM data_tbl";
+        $select_all_data_result = mysqli_query($con, $select_all_data);
+
+        // while($row = mysqli_fetch_assoc($select_all_data_result)){
+
+        // }
+    }
+
 ?>
