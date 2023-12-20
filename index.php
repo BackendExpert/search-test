@@ -10,6 +10,27 @@
 </head>
 <body>
 
+<div class="container">
+    <div class="card">
+        <div class="card-header">Data Insert</div>
+        <div class="card-body">
+            <form action="<?php ech0($_SERVER["PHP_SELF"]); ?>" method="POST">
+                <label for="nmae">Name : </label>
+                <input type="text" name="iname" id="" class="form-control"><br>
+
+                <label for="emial">Email : </label>
+                <input type="email" name="email" id="" class="form-control"><br>
+
+                <label for="moblie">Moblie : </label>
+                <input type="text" name="mobile" id="" class="form-control"><br>
+
+                <label for="tag">Tag : </label>
+                <input type="text" name="i_tag" id="" class="form-control"><br>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
