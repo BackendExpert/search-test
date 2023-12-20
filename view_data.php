@@ -19,7 +19,12 @@
             </div>
         </div>
     </form>
-
     <hr>
+    <br>
+
+    <?php 
+        all_data();
+    ?>
+
 
 </div>
