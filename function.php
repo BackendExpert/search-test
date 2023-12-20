@@ -56,7 +56,7 @@
         $tag_nor = mysqli_num_rows($select_tag_result);
 
         if($tag_nor == 0){
-            echo "<p style='color:red'></p>"
+            echo "<p style='color:red'>No Recodes Found</p>";
         }
 
         while($row = mysqli_fetch_assoc($select_tag_result)){
