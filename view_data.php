@@ -31,8 +31,13 @@
     <br>
 
     <?php 
-        // all_data();
-        data_by_search();
+
+        if(isset($_POST['tag_search'])){
+            data_by_search();
+        }else{
+            all_data();
+        }
+        
     ?>
 
 
