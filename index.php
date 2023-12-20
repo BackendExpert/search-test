@@ -11,20 +11,23 @@
 <body>
 
 <div class="container">
+    <br><br>
+    <h2>Searching Test</h2>
+
     <div class="card">
-        <div class="card-header">Data Insert</div>
-        <div class="card-body">
-            <form action="<?php ech0($_SERVER["PHP_SELF"]); ?>" method="POST">
-                <label for="nmae">Name : </label>
-                <input type="text" name="iname" id="" class="form-control"><br>
+        <div class="card-header">Data</div>
+        <div class="card-body">            
+            <form action="<?php echo($_SERVER['PHP_SELF'])?>" method="post">
+                <label for="name">Name : </label>
+                <input type="text" name="i_name" id="" class="form-control"><br>
 
-                <label for="emial">Email : </label>
-                <input type="email" name="email" id="" class="form-control"><br>
+                <label for="name">Email : </label>
+                <input type="text" name="email" id="" class="form-control"><br>
 
-                <label for="moblie">Moblie : </label>
+                <label for="name">Mobile : </label>
                 <input type="text" name="mobile" id="" class="form-control"><br>
 
-                <label for="tag">Tag : </label>
+                <label for="name">Tag : </label>
                 <input type="text" name="i_tag" id="" class="form-control"><br>
             </form>
         </div>
