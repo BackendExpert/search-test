@@ -13,7 +13,7 @@
     <form action="" method="post">
         <div class="row">
             <div class="col-lg-8">
-                <input type="text" name="search_tag" id="" class="form-control" required>
+                <input type="text" name="search_tag" id="" class="form-control" placeholder="Search By Tag" required>
             </div>
             <div class="col-lg-4">
                 <input type="submit" value="Search" name="tag_search" class="btn btn-success" style="width:100%;">
