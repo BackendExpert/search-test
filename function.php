@@ -9,16 +9,12 @@
 
         $dataArray = array_map('trim', $dataArray);
 
-        $jsonEncodedData = json_encode($dataArray);
-    
+        $jsonEncodedData = json_encode($dataArray);   
 
-        echo '<pre>';
-        echo $jsonEncodedData;
-        echo '</pre>';
         
 
-        // $insert_data = "INSERT INTO data_tbl(iname,email,moblie,tag,add_at)VALUES('$iname','$email','$mobile','$jsonData', NOW())";
-        // $insert_data_result = mysqli_query($con, $insert_data);
+        $insert_data = "INSERT INTO data_tbl(iname,email,moblie,tag,add_at)VALUES('$iname','$email','$mobile','$jsonEncodedData', NOW())";
+        $insert_data_result = mysqli_query($con, $insert_data);
     }
 
     function all_data(){
@@ -88,14 +84,25 @@
             <div class='card-body'>
               <h5 class='card-title'>".$row['email']."</h5>
               <p class='card-text'>".$row['moblie']."</p>
-              <p>Tag</p>
-              <button class='btn btn-primary'>".$row['tag']."</button>
-            </div>
+              <p>Tag</p>";
+
+              $tags=$row['tag'];
+              $decode_data = json_decode($tags, true);
+
+              if ($decode_data !== null && is_array($decode_data)) {
+                foreach ($decode_data as $tg){
+                    $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
+                }    
+              } else {
+                echo "Error decoding JSON data ". json_last_error_msg();
+            }
+              $view_data .= "</div>
           </div><br>
 
            ";
 
            echo $view_data;
+
         }
     }
 
