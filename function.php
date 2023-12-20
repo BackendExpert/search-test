@@ -33,7 +33,7 @@
 
               $decode_data = json_decode($row['tag']);
               foreach ($decode_data as $tg){
-                $view_data .= "  <button class='btn btn-primary'>".$decode_data->tag."</button>";
+                $view_data .= "  <button class='btn btn-primary'>".$tg."</button>";
               }             
             
               $view_data .= "</div>
