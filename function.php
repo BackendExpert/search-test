@@ -50,7 +50,9 @@
         $con = Connection();
 
         $search_data = strval($_SESSION['search_data']);
-        echo $search_data;
+        
+        $select_tag = "SELECT * FROM data_tbl WHERE tag = '$search_data'";
+        $select_tag_result = mysqli_query($con, $select_tag);
     }
 
 ?>
