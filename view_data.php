@@ -31,7 +31,8 @@
     <br>
 
     <?php 
-        all_data();
+        // all_data();
+        data_by_search();
     ?>
 
 
