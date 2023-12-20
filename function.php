@@ -7,10 +7,10 @@
 
         $tagArray = explode("\n",$tag);
 
-        print_r($tagArray);
+        // print_r($tagArray);
 
-        // $insert_data = "INSERT INTO data_tbl(iname,email,moblie,tag,add_at)VALUES('$iname','$email','$mobile','$tag', NOW())";
-        // $insert_data_result = mysqli_query($con, $insert_data);
+        $insert_data = "INSERT INTO data_tbl(iname,email,moblie,tag,add_at)VALUES('$iname','$email','$mobile','$tagArray', NOW())";
+        $insert_data_result = mysqli_query($con, $insert_data);
     }
 
     function all_data(){
